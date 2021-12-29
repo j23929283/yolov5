@@ -148,7 +148,7 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
 
                 # Write results
-                with open(txt_path + '.txt', 'e') as f:
+                with open(txt_path + '.txt', 'w') as f:
                     f.write('')
                 for *xyxy, conf, cls in reversed(det):
                     if save_txt:  # Write to file
